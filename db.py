@@ -16,7 +16,7 @@ timestamps = []
 
 # ЧТЕНИЕ КОМ-ПОРТА И ПАРСИНГ
 def read_com_port():
-    ser = serial.Serial('COM12', baudrate=115200, timeout=1)
+    ser = serial.Serial('/dev/ttyUSB0', baudrate=115200, timeout=1)
     try:
         while True:
             if ser.in_waiting > 0:
